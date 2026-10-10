@@ -1,0 +1,35 @@
+/* V6: one compact, native Material header. No duplicated tabs or credentials. */
+.lg-site-header { background:#081a30!important; color:#f6f9ff!important; border-bottom:1px solid rgba(151,188,226,.18)!important; box-shadow:0 1px 6px rgba(0,0,0,.1)!important; }
+.lg-site-header .lg-header-row { width:100%; min-height:54px; height:54px; max-width:1430px; display:flex; align-items:center; padding:0 20px; gap:0; }
+.lg-site-brand { flex:0 0 247px; font:650 15px/1.15 system-ui,-apple-system,'Segoe UI',sans-serif; color:#f5f8ff!important; letter-spacing:.035em; text-decoration:none!important; white-space:nowrap; }
+.lg-site-brand:hover { color:#91cdff!important; }
+.lg-site-navigation { align-self:stretch; display:flex; justify-content:center; gap:29px; align-items:stretch; margin:auto; }
+.lg-site-navigation .lg-site-link { position:relative; display:inline-flex; align-items:center; gap:5px; height:100%; font:500 12px/1.2 system-ui,-apple-system,'Segoe UI',sans-serif; color:#dce8f8!important; text-decoration:none!important; transition:color .14s; white-space:nowrap; }
+.lg-site-navigation .lg-site-link:hover,.lg-site-navigation .is-active>.lg-site-link,.lg-site-navigation .lg-site-link.is-active { color:#fff!important; }
+.lg-site-navigation .lg-site-link.is-active:after,.lg-site-navigation .lg-site-nav-group.is-active>.lg-site-link:after { content:''; position:absolute; left:0; right:0; bottom:0; height:2px; background:#4fb9ff; }
+.lg-site-nav-group { position:relative; height:100%; }
+.lg-chevron { font-size:15px; line-height:1; margin-left:1px; transform:translateY(-1px); }
+.lg-site-dropdown { display:none; position:absolute; top:calc(100% - 1px); left:-17px; z-index:120; min-width:190px; padding:8px; border:1px solid #304962; border-radius:0 0 7px 7px; box-shadow:0 12px 30px rgba(0,0,0,.27); background:#0b213a; }
+.lg-site-dropdown a { display:block; color:#e6f2ff!important; font:500 12px/1.35 system-ui,-apple-system,'Segoe UI',sans-serif; text-decoration:none!important; border-radius:4px; padding:7px 10px; }
+.lg-site-dropdown a:hover,.lg-site-dropdown a:focus-visible { background:#193d61; color:#fff!important; }
+.lg-site-nav-group:hover .lg-site-dropdown,.lg-site-nav-group:focus-within .lg-site-dropdown { display:block; }
+.lg-header-tools { flex:0 0 230px; margin-left:auto; display:flex; align-items:center; justify-content:flex-end; gap:4px; }
+.lg-header-tools .md-header__button { color:#eaf3ff!important; padding:9px; margin:0; }
+.lg-header-tools .md-header__button svg { fill:currentColor; width:20px; height:20px; }
+.lg-header-tools .md-header__button:hover { color:#70c4ff!important; }
+.lg-header-tools .md-header__option { display:inline-flex; align-items:center; margin:0; padding:0; }
+.lg-header-tools .md-option { margin:0; }
+.lg-drawer-toggle { display:none; }
+/* Material's actual search modal belongs to this header and is not a mock. */
+.lg-site-header .md-search { color:var(--md-default-fg-color); }
+@media(max-width:1000px) { .lg-site-brand { flex-basis:190px; } .lg-header-tools { flex-basis:145px; } .lg-site-navigation { gap:16px; } }
+/* At smaller widths, delegate navigation to Material's native mobile drawer. */
+@media(max-width:760px) { .lg-site-header .lg-header-row { padding:0 10px; gap:5px; } .lg-site-navigation { display:none; } .lg-drawer-toggle { display:inline-flex; margin:0 2px 0 0; color:#fff!important; } .lg-site-brand { flex:1 1 auto; font-size:14px; } .lg-header-tools { flex:0 0 auto; margin-left:auto; gap:0; } .lg-header-tools .md-header__button { padding:8px; } }
+@media(max-width:380px) { .lg-site-header .lg-header-row { padding:0 4px; } .lg-site-brand { font-size:12px; letter-spacing:.01em; } .lg-header-tools .md-header__button { padding:6px; } }
+@media(prefers-reduced-motion:reduce) { .lg-site-navigation .lg-site-link { transition:none; } }
+/* Preserve the search plugin's real form, but present it as an icon-triggered popover. */
+.lg-header-tools > .md-search { flex:0 0 0!important; width:0!important; min-width:0!important; position:static; }
+.lg-header-tools .md-search__inner { position:fixed!important; width:min(440px,calc(100vw - 24px))!important; max-width:none!important; top:54px!important; right:max(12px,calc((100vw - 1380px)/2))!important; left:auto!important; opacity:0; visibility:hidden; pointer-events:none; transform:translateY(-5px); transition:opacity .15s,transform .15s; }
+body:has(#__search:checked) .lg-header-tools .md-search__inner { opacity:1!important; visibility:visible!important; pointer-events:auto!important; transform:none; }
+.lg-site-header .md-search__overlay { z-index:1; }
+@media(max-width:760px) { .lg-header-tools .md-search__inner { top:0!important; right:0!important; left:0!important; width:100vw!important; max-width:none!important; } }

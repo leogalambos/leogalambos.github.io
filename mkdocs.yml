@@ -1,0 +1,77 @@
+site_name: LEO GALAMBOS
+site_description: Leo Galambos — independent research, software engineering, information security and Egothor projects.
+site_author: Leo Galambos
+site_url: https://leogalambos.github.io/
+repo_url: https://github.com/leogalambos/leogalambos.github.io
+repo_name: leogalambos.github.io
+edit_uri: edit/main/docs/
+copyright: © 2026 Leo Galambos · Independent professional portfolio
+
+nav:
+  - Home: index.md
+  - Projects:
+      - Overview: work/index.md
+      - JAI: work/jai.md
+      - EGOTHOR v4: work/egothor-v4.md
+      - Radixor: work/radixor.md
+      - ZeroEcho: work/zeroecho.md
+      - conflux: work/conflux.md
+      - MethodAtlas: work/methodatlas.md
+      - Earlier work: work/heritage.md
+  - Profile: about.md
+  - Contact: contact.md
+
+theme:
+  name: material
+  custom_dir: overrides
+  language: en
+  logo: assets/img/brandmark.svg
+  favicon: assets/img/favicon.svg
+  font: false
+  icon:
+    repo: fontawesome/brands/github
+  features:
+    - navigation.top
+    - navigation.footer
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+  palette:
+    - media: '(prefers-color-scheme: light)'
+      scheme: default
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark theme
+    - media: '(prefers-color-scheme: dark)'
+      scheme: slate
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light theme
+plugins:
+  - search:
+      lang: en
+markdown_extensions:
+  - attr_list
+  - md_in_html
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - toc:
+      permalink: true
+extra_css:
+  - assets/css/header.css
+  - assets/css/portfolio.css
+  - assets/css/landing.css
+extra:
+  generator: false
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/leogalambos
+      name: GitHub
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/in/leogalambos/
+      name: LinkedIn

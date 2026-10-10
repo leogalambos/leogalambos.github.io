@@ -1,0 +1,28 @@
+{
+  "version": "6.1",
+  "platform": "MkDocs Material / GitHub Pages",
+  "pages": [
+    "index.md",
+    "about.md",
+    "contact.md",
+    "heritage.md",
+    "index.md",
+    "jai.md",
+    "egothor-v4.md",
+    "conflux.md",
+    "zeroecho.md",
+    "radixor.md",
+    "methodatlas.md"
+  ],
+  "illustration": "assets/img/hero-landscape.webp",
+  "projects": [
+    "JAI",
+    "EGOTHOR v4",
+    "Radixor",
+    "ZeroEcho",
+    "conflux",
+    "MethodAtlas"
+  ],
+  "project_attribution": "Egothor personal research portfolio; MethodAtlas concept later adapted for commercial use. No employer branding.",
+  "header": "Single-row MkDocs Material Jinja partial; null-safe for 404 and other system templates, no credentials in global header"
+}

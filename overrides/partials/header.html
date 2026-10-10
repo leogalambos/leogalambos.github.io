@@ -1,0 +1,60 @@
+{# Compact MkDocs Material header; page can be None for 404 and other theme templates.
+   Do not access page.url or page.is_homepage until page has been checked.
+#}
+{% set current_url = page.url if page is defined and page and page.url is defined else '' %}
+{% set is_home = page.is_homepage if page is defined and page and page.is_homepage is defined else false %}
+<header class="md-header lg-site-header" data-md-component="header">
+  <div class="md-header__inner md-grid lg-header-row">
+    <label class="md-header__button md-icon lg-drawer-toggle" for="__drawer" aria-label="Open navigation">
+      {% set icon = config.theme.icon.menu or "material/menu" %}
+      {% include ".icons/" ~ icon ~ ".svg" %}
+    </label>
+
+    <a class="lg-site-brand" href="{{ nav.homepage.url | url }}" aria-label="Leo Galambos — homepage">
+      LEO GALAMBOS
+    </a>
+
+    <nav class="lg-site-navigation" aria-label="Primary navigation">
+      <a class="lg-site-link{% if is_home %} is-active{% endif %}" href="{{ nav.homepage.url | url }}"{% if is_home %} aria-current="page"{% endif %}>Home</a>
+      <div class="lg-site-nav-group{% if current_url.startswith('work/') %} is-active{% endif %}">
+        <a class="lg-site-link lg-project-trigger" href="{{ 'work/' | url }}"{% if current_url == 'work/' %} aria-current="page"{% endif %}>Projects <span aria-hidden="true" class="lg-chevron">⌄</span></a>
+        <div class="lg-site-dropdown" aria-label="Project pages">
+          <a href="{{ 'work/' | url }}">All projects</a>
+          <a href="{{ 'work/jai/' | url }}">JAI</a>
+          <a href="{{ 'work/egothor-v4/' | url }}">EGOTHOR v4</a>
+          <a href="{{ 'work/radixor/' | url }}">Radixor</a>
+          <a href="{{ 'work/zeroecho/' | url }}">ZeroEcho</a>
+          <a href="{{ 'work/conflux/' | url }}">conflux</a>
+          <a href="{{ 'work/methodatlas/' | url }}">MethodAtlas</a>
+          <a href="{{ 'work/heritage/' | url }}">Earlier work</a>
+        </div>
+      </div>
+      <a class="lg-site-link{% if current_url == 'about/' %} is-active{% endif %}" href="{{ 'about/' | url }}"{% if current_url == 'about/' %} aria-current="page"{% endif %}>Profile</a>
+      <a class="lg-site-link{% if current_url == 'contact/' %} is-active{% endif %}" href="{{ 'contact/' | url }}"{% if current_url == 'contact/' %} aria-current="page"{% endif %}>Contact</a>
+    </nav>
+
+    <div class="lg-header-tools">
+      {% if "material/search" in config.plugins %}
+        {% set search = config.plugins["material/search"] | attr("config") %}
+        {% if search.enabled %}
+          <label class="md-header__button md-icon lg-search-button" for="__search" aria-label="Search">
+            {% set icon = config.theme.icon.search or "material/magnify" %}
+            {% include ".icons/" ~ icon ~ ".svg" %}
+          </label>
+          {% include "partials/search.html" %}
+        {% endif %}
+      {% endif %}
+      {% if config.theme.palette %}
+        {% if not config.theme.palette is mapping %}
+          {% include "partials/palette.html" %}
+        {% endif %}
+      {% endif %}
+      {% if not config.theme.palette is mapping %}
+        {% include "partials/javascripts/palette.html" %}
+      {% endif %}
+      <a class="md-header__button md-icon lg-github-button" href="https://github.com/leogalambos" aria-label="GitHub profile" title="GitHub profile" rel="me noopener noreferrer" target="_blank">
+        {% include ".icons/fontawesome/brands/github.svg" %}
+      </a>
+    </div>
+  </div>
+</header>
