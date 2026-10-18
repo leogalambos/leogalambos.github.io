@@ -32,6 +32,12 @@ Nine author-released research manuscripts are maintained together with experimen
 
 Lexical examples are transformed into compact executable patch commands and a reduced trie. Language knowledge is learned and validated offline; production lookups execute a compiled read-only model. Deterministic alternative outputs preserve ambiguity for downstream search or analysis.
 
+## Research lineage
+
+Radixor revisits the original Egothor/Stempel stemming lineage as a modern multilingual toolkit. Compact compiled tries and deterministic behaviour connect that earlier language-independent stemming work with contemporary quality engineering. The [earlier portfolio](heritage.md) places the original search and stemming work in its historical context.
+
+<!-- Content owner: Leo Galambos. Review by: 2027-10-18. Source: imported selected-work portfolio. -->
+
 [Technical architecture and model formats ↗](https://leogalambos.github.io/Radixor/)
 </div>
 <div class="next-project"><a href="../">← Project overview</a><a href="../zeroecho/">Next: ZeroEcho →</a></div>

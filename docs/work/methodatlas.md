@@ -21,4 +21,12 @@ The original engineering ideas emerged from independent Egothor work. Certain ap
 - Repeatable analysis and review of security-relevant tests.
 - Clear separation between deterministic rules and optional AI-assisted recommendations.
 
+## Test inventory and evidence
+
+The methodology includes source-level test inventory and security classification, organised around reproducibility and evidence generation. This connects the practical task of understanding a test suite with the need to review its security-related coverage in regulated software-delivery workflows.
+
+Within this portfolio, these topics describe the general engineering approach. They complement the broader assurance theme: keeping rules, classifications and test evidence explicit enough to inspect and review.
+
+<!-- Content owner: Leo Galambos. Review by: 2027-10-18. Source: imported selected-work portfolio; existing independence boundary retained. -->
+
 For more independent work, see the [project overview](index.md).

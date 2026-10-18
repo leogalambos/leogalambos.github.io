@@ -22,5 +22,13 @@ The project currently exposes technical documentation and an original project pu
 ## Why it matters
 
 Migrating to post-quantum cryptography is rarely an atomic change. ZeroEcho puts established primitives and emerging algorithm families within a consistent architectural framework without implying that interoperability is automatic.
+
+## Workflow scope
+
+The toolkit spans encryption, signing, key management and PKI for Java applications. Its modular approach brings classical and post-quantum cryptography into resilient workflows, including offline operating models.
+
+These concerns reach beyond selecting an algorithm: the application must also account for key boundaries, issuance and lifecycle services, and the operating conditions in which cryptographic work takes place. The [project overview](https://www.egothor.org/projects/zeroecho/) provides the implementation-specific documentation.
+
+<!-- Content owner: Leo Galambos. Review by: 2027-10-18. Source: imported selected-work portfolio and existing project overview. -->
 </div>
 <div class="next-project"><a href="../">← Project overview</a><a href="../conflux/">Next: conflux →</a></div>

@@ -17,5 +17,13 @@ The source and [project overview](https://www.egothor.org/projects/conflux/) doc
 ## Design principle
 
 Independent modules often need to publish a little state and notify each other. conflux deliberately solves that narrow problem without attempting to become a dependency injection framework, distributed broker or full application platform.
+
+## Shared context and events
+
+The library combines a shared processing context with an event bus. A component can expose state through typed keys and communicate changes without coupling its implementation to every component that consumes them. Shared current state and change notifications provide complementary ways for independently developed modules to coordinate.
+
+This focus places conflux within the Java infrastructure side of the Egothor portfolio: a small coordination component that applications can use alongside their own processing logic.
+
+<!-- Content owner: Leo Galambos. Review by: 2027-10-18. Source: imported selected-work portfolio and existing project overview. -->
 </div>
 <div class="next-project"><a href="../">← Project overview</a><a href="../jai/">Next: JAI →</a></div>

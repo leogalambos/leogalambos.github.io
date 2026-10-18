@@ -20,3 +20,23 @@ hide:
   <p><strong>Egothor</strong> established the original full-text retrieval and stemming line later revisited by Radixor. <strong>Galeo</strong> explored IP geolocation from network-path measurements and heterogeneous delays; <strong>Q!D / Egothor3</strong> investigated experimental databases built on distributed infrastructure. These records are not given invented journal citations.</p>
   <div class="source-links"><a href="https://www.egothor.org/heritage/">Egothor heritage ↗</a><a href="https://www.egothor.org/~galambos/projects/">Selected history ↗</a><a href="https://www.linkedin.com/in/leogalambos/">LinkedIn project history ↗</a></div>
 </div>
+
+## Distributed platforms and data systems
+
+**J5M (2007–2015)** was a lightweight distributed application platform with service discovery, lifecycle control and hot-spare object support. **Bobo (2012–2014)** grew from the Egothor search infrastructure into a distributed crawler and virtual-entity platform. These projects connect the search-engine work with later experiments in distributed data processing.
+
+**Q!D (2015–2022)** was an experimental database system on J5M, associated with the Egothor3 data-platform research direction. **Cyclone (2016–2018)** addressed a different part of the data pipeline: high-capacity distributed crawling and modular analysis of Facebook Graph API and RSS data.
+
+## Networks, sensors and application services
+
+**Galeo (2013–2014)** investigated IP geolocation through network-path measurements and heterogeneous propagation assumptions. Its focus was inference from network behaviour rather than an application-level location service.
+
+**SNOG (2014–2015)**, the Sensor Network Open Gateway, integrated sensors, mobile clients, external services and user interfaces through a REST API. **RaSPEL (2017–2018)** was a Java EE bridge/controller between LoRaWAN networks and RESTful business services.
+
+**SafetyCare (2016–2020)** applied GPS/GSM capabilities to an assistance application with location reporting and BTS lookup. These entries document earlier engineering interests; they do not establish current service operation or product support.
+
+## Search and language foundations
+
+The original **Egothor (1998–2018)** was an open-source Java full-text search engine and the original home of the language-independent stemming work. The current portfolio returns to these two strands separately: [EGOTHOR v4](egothor-v4.md) explores regulated search, while [Radixor](radixor.md) revisits the Egothor/Stempel language-processing lineage.
+
+<!-- Content owner: Leo Galambos. Review by: 2027-10-18. Source: imported selected historical portfolio. -->
