@@ -14,7 +14,7 @@ hide:
 
 ## Authorship and professional independence
 
-My independent **Egothor** portfolio includes JAI, EGOTHOR v4, Radixor, ZeroEcho, conflux and earlier research projects. **MethodAtlas** began as Egothor-oriented methodology work, with approaches later modified for commercial use. This portfolio deliberately does not name, represent or imply endorsement by any employer, and it does not publish commercial implementation details.
+My independent **Egothor** portfolio includes JAI, EGOTHOR v4, J7M, Radixor, ZeroEcho, conflux and earlier research projects. **MethodAtlas** began as Egothor-oriented methodology work, with approaches later modified for commercial use. This portfolio deliberately does not name, represent or imply endorsement by any employer, and it does not publish commercial implementation details.
 
 ## Professional focus
 

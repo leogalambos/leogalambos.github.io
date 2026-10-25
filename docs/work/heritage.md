@@ -13,7 +13,7 @@ hide:
 
 ## Distributed platforms and data systems
 
-**J5M (2007–2015)** was a lightweight Java distributed application platform and coordination infrastructure with service discovery, lifecycle control and hot-spare object support.
+**J5M (2007–2015)** was a lightweight Java distributed application platform and coordination infrastructure with service discovery, lifecycle control and hot-spare object support. [J7M](j7m.md) continues this middleware lineage with a Java 25 distributed-object and application platform.
 
 **Bobo (2012–2014)** grew from the Egothor search infrastructure into a distributed crawler and virtual-entity platform.
 

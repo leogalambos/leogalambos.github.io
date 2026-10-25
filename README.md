@@ -1,6 +1,6 @@
 # Leo Galambos — personal GitHub Pages
 
-A responsive, compact personal research and engineering portfolio based on **MkDocs Material**, with a photographic hero inspired by the supplied reference and a six-card project grid.
+A responsive, compact personal research and engineering portfolio based on **MkDocs Material**, with a photographic hero inspired by the supplied reference and a seven-card project grid.
 
 ## Quick start
 
@@ -13,7 +13,7 @@ python -m mkdocs serve
 
 Deployment: GitHub repository `leogalambos.github.io`, branch `main`; `Settings → Pages → GitHub Actions`. On each push the workflow builds with `--strict` and deploys `site/`.
 
-Projects: JAI, EGOTHOR v4, Radixor, ZeroEcho, conflux and MethodAtlas; publications are collocated under project pages. MethodAtlas is described as work originating in Egothor and later adapted for commercial use. No employer affiliation or endorsement is claimed.
+Projects: JAI, EGOTHOR v4, J7M, Radixor, ZeroEcho, conflux and MethodAtlas; publications are collocated under project pages. MethodAtlas is described as work originating in Egothor and later adapted for commercial use. No employer affiliation or endorsement is claimed.
 
 External photography is not loaded at runtime. Assets and SVG are bundled in the repository. Contact and project navigation require no JavaScript beyond what MkDocs Material provides.
 

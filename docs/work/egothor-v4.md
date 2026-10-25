@@ -20,4 +20,4 @@ This is a **private beta**; a public open-source release is planned. No publicly
 
 The project revives the Egothor search-engine line first developed in 1998. Its current design targets information-governance constraints not central to the original engine. For the earlier Java full-text search and stemming work, see the [historical portfolio](heritage.md).
 </div>
-<div class="next-project"><a href="../">← Project overview</a><a href="../radixor/">Next: Radixor →</a></div>
+<div class="next-project"><a href="../">← Project overview</a><a href="../j7m/">Next: J7M →</a></div>

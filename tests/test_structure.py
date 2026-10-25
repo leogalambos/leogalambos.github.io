@@ -11,7 +11,7 @@ DOCS = ROOT / 'docs'
 class SiteStructureTests(unittest.TestCase):
     def test_pages_exist(self):
         pages = ('index.md', 'about.md', 'contact.md', 'work/index.md',
-                 'work/jai.md', 'work/radixor.md', 'work/egothor-v4.md',
+                 'work/jai.md', 'work/j7m.md', 'work/radixor.md', 'work/egothor-v4.md',
                  'work/zeroecho.md', 'work/conflux.md', 'work/methodatlas.md',
                  'work/heritage.md')
         for relative in pages:
@@ -105,10 +105,28 @@ class SiteStructureTests(unittest.TestCase):
 
     def test_project_navigation_on_homepage(self):
         t = (DOCS / 'index.md').read_text()
-        self.assertEqual(t.count('class="lg-card"'), 6)
+        self.assertEqual(t.count('class="lg-card"'), 7)
         self.assertIn('href="contact/"', t)
         self.assertIn('href="about/"', t)
         self.assertIn('href="work/"', t)
+
+    def test_seven_projects_are_consistent_across_entry_points(self):
+        """Every selected project remains reachable from both card collections."""
+        projects = ('jai', 'egothor-v4', 'j7m', 'radixor', 'zeroecho',
+                    'conflux', 'methodatlas')
+        for page, prefix in (('index.md', 'work/'), ('work/index.md', '')):
+            text = (DOCS / page).read_text()
+            self.assertEqual(text.count('class="lg-card"'), len(projects))
+            for project in projects:
+                with self.subTest(page=page, project=project):
+                    self.assertIn(f'href="{prefix}{project}/"', text)
+        self.assertIn('<strong>7</strong><small>Selected projects',
+                      (DOCS / 'index.md').read_text())
+        self.assertIn('J7M', (DOCS / 'about.md').read_text())
+        self.assertIn("'work/j7m/' | url", (ROOT / 'overrides/partials/header.html').read_text())
+        j7m = (DOCS / 'work/j7m.md').read_text()
+        self.assertIn('https://www.egothor.org/J7M/', j7m)
+        self.assertIn('https://github.com/Egothor/J7M', j7m)
 
     def test_single_row_real_material_header(self):
         import jinja2
@@ -189,6 +207,7 @@ class SiteStructureTests(unittest.TestCase):
         self.assertEqual(config['theme']['name'], 'material')
         self.assertIn('assets/css/landing.css', config['extra_css'])
         self.assertIn({'MethodAtlas': 'work/methodatlas.md'}, config['nav'][1]['Projects'])
+        self.assertIn({'J7M': 'work/j7m.md'}, config['nav'][1]['Projects'])
         self.assertIn({'Contact': 'contact.md'}, config['nav'])
 
 if __name__ == '__main__':
